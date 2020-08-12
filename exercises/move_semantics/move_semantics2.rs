@@ -2,12 +2,10 @@
 // Make me compile without changing line 13!
 // Execute `rustlings hint move_semantics2` for hints :)
 
-// I AM NOT DONE
-
 fn main() {
     let vec0 = Vec::new();
 
-    let mut vec1 = fill_vec(vec0);
+    let mut vec1 = fill_vec(vec0.clone());
 
     // Do not change the following line!
     println!("{} has length {} content `{:?}`", "vec0", vec0.len(), vec0);
@@ -26,3 +24,6 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 
     vec
 }
+
+// version 2 would be to pass `&vec0` and make `fill_vec` arguments `&Vec`. then use `let mut vec = vec.clone()`
+// version 3 would be to us `&mut vec0` and change `fill_vec` argument accordingly`
