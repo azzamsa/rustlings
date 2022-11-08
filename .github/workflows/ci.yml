@@ -5,12 +5,10 @@ on: [push, pull_request]
 jobs:
   verify:
     name: Verify solutions
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
+        uses: actions/checkout@v3
 
       - name: Install rust toolchain
         uses: actions-rs/toolchain@v1
@@ -28,7 +26,7 @@ jobs:
           rustlings --version
 
       - name: Cache
-        uses: Swatinem/rust-cache@v1
+        uses: Swatinem/rust-cache@v2
 
       - name: Verify solutions
         run: |
