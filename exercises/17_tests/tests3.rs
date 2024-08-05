@@ -9,7 +9,7 @@ impl Rectangle {
         if width <= 0 || height <= 0 {
             // Returning a `Result` would be better here. But we want to learn
             // how to test functions that can panic.
-            panic!("Rectangle width and height must be positive");
+            panic!("Rectangle width and height can't be negative");
         }
 
         Rectangle { width, height }

@@ -1,4 +1,4 @@
 fn main() {
-    // `println!` instead of `printline!`.
-    println!("Hello world!");
+    // DON'T EDIT THIS SOLUTION FILE!
+    // It will be automatically filled after you finish the exercise.
 }
